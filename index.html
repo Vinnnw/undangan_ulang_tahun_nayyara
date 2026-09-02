@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="id" style="">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Nayyara's 1st Birthday</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&amp;family=Plus+Jakarta+Sans:wght@400;600&amp;family=Be+Vietnam+Pro:wght@600&amp;display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet">
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary-fixed-variant": "#4d4547",
+                        "secondary-fixed-dim": "#e9c349",
+                        "on-primary-container": "#74454f",
+                        "on-tertiary-fixed": "#201a1c",
+                        "surface-bright": "#fff8f6",
+                        "surface-container-high": "#ffe2da",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-dim": "#fbd1c4",
+                        "surface-tint": "#81515b",
+                        "background": "#fff8f6",
+                        "error": "#ba1a1a",
+                        "primary-container": "#f4b6c2",
+                        "on-secondary-fixed": "#241a00",
+                        "primary": "#81515b",
+                        "tertiary-container": "#cfc3c6",
+                        "on-tertiary": "#ffffff",
+                        "tertiary-fixed-dim": "#cfc4c6",
+                        "on-secondary-fixed-variant": "#574500",
+                        "secondary": "#735c00",
+                        "surface": "#fff8f6",
+                        "outline-variant": "#d5c2c4",
+                        "inverse-on-surface": "#ffede8",
+                        "on-error-container": "#93000a",
+                        "tertiary-fixed": "#ecdfe2",
+                        "primary-fixed": "#ffd9df",
+                        "inverse-surface": "#442a22",
+                        "on-primary": "#ffffff",
+                        "inverse-primary": "#f4b6c2",
+                        "outline": "#837375",
+                        "secondary-container": "#fed65b",
+                        "on-secondary-container": "#745c00",
+                        "secondary-fixed": "#ffe088",
+                        "tertiary": "#655c5f",
+                        "on-tertiary-container": "#585053",
+                        "on-surface": "#2c160e",
+                        "on-primary-fixed-variant": "#663a44",
+                        "primary-fixed-dim": "#f4b6c2",
+                        "on-surface-variant": "#514346",
+                        "error-container": "#ffdad6",
+                        "on-secondary": "#ffffff",
+                        "surface-variant": "#ffdbd0",
+                        "surface-container-highest": "#ffdbd0",
+                        "surface-container": "#ffe9e3",
+                        "on-primary-fixed": "#330f19",
+                        "on-background": "#2c160e",
+                        "on-error": "#ffffff",
+                        "surface-container-low": "#fff1ed"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "stack-lg": "32px",
+                        "gutter": "16px",
+                        "stack-md": "16px",
+                        "margin-page": "24px",
+                        "stack-sm": "8px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Plus Jakarta Sans"],
+                        "headline-lg-mobile": ["Playfair Display"],
+                        "headline-lg": ["Playfair Display"],
+                        "display-royal": ["Playfair Display"],
+                        "label-sm": ["Be Vietnam Pro"]
+                    },
+                    "fontSize": {
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "headline-lg-mobile": ["28px", { "lineHeight": "36px", "fontWeight": "600" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "600" }],
+                        "display-royal": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "label-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: theme('colors.background');
+            background-image: radial-gradient(circle at top right, theme('colors.surface-container-high'), transparent 50%),
+                radial-gradient(circle at bottom left, theme('colors.primary-container'), transparent 50%);
+            background-attachment: fixed;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px dashed theme('colors.secondary-fixed-dim');
+            box-shadow: 0 10px 30px rgba(93, 64, 55, 0.05);
+        }
+
+        .text-gradient {
+            background: linear-gradient(135deg, theme('colors.primary'), theme('colors.secondary-container'));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .ambient-shadow {
+            box-shadow: 0 8px 24px rgba(93, 64, 55, 0.15);
+        }
+
+        /* Sparkle animation */
+        @keyframes float {
+            0% {
+                transform: translateY(0px) rotate(0deg);
+                opacity: 0;
+            }
+
+            50% {
+                transform: translateY(-20px) rotate(180deg);
+                opacity: 1;
+            }
+
+            100% {
+                transform: translateY(-40px) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        .sparkle {
+            position: absolute;
+            color: theme('colors.secondary-fixed');
+            animation: float 3s infinite ease-in-out;
+            pointer-events: none;
+        }
+
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+
+<body class="text-on-background font-body-md antialiased overflow-x-hidden relative">
+    <!-- Sparkle Particles Layer -->
+    <div class="fixed inset-0 pointer-events-none overflow-hidden z-0" id="sparkle-container">
+        <!-- JS will populate sparkles here -->
+        <span class="material-symbols-outlined sparkle"
+            style="left: 39.0765vw; top: 99.9129vh; font-size: 19.2756px; animation-delay: 3.99021s; animation-duration: 6.68342s;">flare</span><span
+            class="material-symbols-outlined sparkle"
+            style="left: 58.0734vw; top: 60.2186vh; font-size: 10.6763px; animation-delay: 0.107361s; animation-duration: 5.7363s;">flare</span><span
+            class="material-symbols-outlined sparkle"
+            style="left: 44.082vw; top: 70.4396vh; font-size: 12.4646px; animation-delay: 4.81226s; animation-duration: 5.39616s;">flare</span><span
+            class="material-symbols-outlined sparkle"
+            style="left: 13.754vw; top: 6.31226vh; font-size: 14.6909px; animation-delay: 1.00502s; animation-duration: 4.91488s;">auto_awesome</span><span
+            class="material-symbols-outlined sparkle"
+            style="left: 56.6628vw; top: 93.6726vh; font-size: 19.474px; animation-delay: 2.0059s; animation-duration: 5.06196s;">auto_awesome</span><span
+            class="material-symbols-outlined sparkle"
+            style="left: 12.6801vw; top: 99.7779vh; font-size: 20.9928px; animation-delay: 2.41824s; animation-duration: 4.32114s;">auto_awesome</span><span
+            class="material-symbols-outlined sparkle"
+            style="left: 48.1795vw; top: 82.4272vh; font-size: 15.3194px; animation-delay: 4.44527s; animation-duration: 5.03273s;">auto_awesome</span><span
+            class="material-symbols-outlined sparkle"
+            style="left: 30.6016vw; top: 78.5219vh; font-size: 17.2392px; animation-delay: 1.70408s; animation-duration: 4.73503s;">auto_awesome</span><span
+            class="material-symbols-outlined sparkle"
+            style="left: 82.692vw; top: 43.9755vh; font-size: 23.9816px; animation-delay: 2.02513s; animation-duration: 5.11316s;">auto_awesome</span><span
+            class="material-symbols-outlined sparkle"
+            style="left: 89.584vw; top: 72.7249vh; font-size: 21.1803px; animation-delay: 1.49959s; animation-duration: 3.32323s;">auto_awesome</span><span
+            class="material-symbols-outlined sparkle"
+            style="left: 3.30344vw; top: 76.2992vh; font-size: 14.9449px; animation-delay: 0.65249s; animation-duration: 4.43485s;">auto_awesome</span><span
+            class="material-symbols-outlined sparkle"
+            style="left: 57.5242vw; top: 29.118vh; font-size: 19.9464px; animation-delay: 1.49676s; animation-duration: 5.55838s;">flare</span><span
+            class="material-symbols-outlined sparkle"
+            style="left: 49.6585vw; top: 36.2381vh; font-size: 13.0775px; animation-delay: 0.814937s; animation-duration: 4.74231s;">auto_awesome</span><span
+            class="material-symbols-outlined sparkle"
+            style="left: 81.1916vw; top: 50.3213vh; font-size: 14.3336px; animation-delay: 3.39229s; animation-duration: 3.85993s;">flare</span><span
+            class="material-symbols-outlined sparkle"
+            style="left: 52.2781vw; top: 93.4018vh; font-size: 19.8665px; animation-delay: 1.88047s; animation-duration: 3.30106s;">flare</span>
+    </div>
+    <!-- MAIN CONTAINER (Mobile Centric) -->
+    <main class="max-w-[480px] mx-auto min-h-screen relative z-10 pt-[72px]">
+        <!-- TopAppBar (Web & Mobile, adjusted per requirements) -->
+        <header
+            class="fixed top-0 w-full z-50 bg-surface/70 dark:bg-surface-dim/70 backdrop-blur-xl border-b border-outline-variant/30 shadow-sm transition-all duration-300 ease-in-out md:max-w-[480px] md:left-1/2 md:-translate-x-1/2">
+            <div class="flex justify-between items-center px-gutter py-4 w-full">
+                <div class="flex items-center gap-2">
+                    <span class="material-symbols-outlined text-primary text-2xl" data-icon="celebration"
+                        style="font-variation-settings: 'FILL' 1;">celebration</span>
+                    <h1 class="font-display-royal text-display-royal text-primary text-[24px] leading-tight m-0">
+                        Nayyara's 1st Birthday</h1>
+                </div>
+            </div>
+        </header>
+        <!-- SECTION 1: Hero Cover -->
+        <section class="px-margin-page py-stack-lg min-h-[80vh] flex flex-col justify-center relative" id="home">
+            <div class="glass-card rounded-3xl p-6 text-center relative overflow-hidden flex flex-col items-center">
+                <!-- Decorative Corner -->
+                <div class="absolute -top-4 -right-4 text-primary-container opacity-50 rotate-45">
+                    <span class="material-symbols-outlined text-6xl">local_florist</span>
+                </div>
+                <h2 class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-[0.2em] mb-4">Undangan
+                    Ulang Tahun</h2>
+                <div
+                    class="w-48 h-48 rounded-full overflow-hidden mb-6 border-4 border-surface shadow-lg mx-auto relative z-10">
+                    <img alt="Nayyara cover" class="w-full h-full object-cover"
+                        data-alt="A beautiful, soft-focus portrait of a cute 1-year-old baby girl named Nayyara wearing a light pink floral dress. She is smiling softly. The background is a dreamy, ethereal light pink studio setting with subtle glowing sparkles and floating translucent petals. The lighting is bright, high-key, and angelic, highlighting her delicate features. The overall style is premium, elegant, and perfect for a high-end digital invitation."
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuC756XpqIIW1_tWOG4QGwb6B11C58_Ffo0HT4fPMZLvpFmnSj0M2Bw9KdoqSbNdBEGiAfgVohRdwmnyKaA6nPUPe441UYas4LI0O_wz5RF7dHB3PxnTycA8iEaJ3W3DrpbHsHpN9OJQYRAZKdANakRtyUzA5m6sOcIIv-dGueW2pZW1saM021U3rZifucNlMEWe3QgB0KLyxBnTv4Jb0jAlx_CQmX3gZ_Iwd0hlkW0Dudgv-8-CFZWoFM7Jq5dsUgFo">
+                </div>
+                <h1 class="font-display-royal text-[40px] leading-[48px] text-primary mb-2">Nayyara <br> Elleanora</h1>
+                <p class="font-headline-lg-mobile text-headline-lg-mobile text-secondary-fixed-dim">is turning <span
+                        class="text-6xl font-display-royal font-medium text-secondary drop-shadow-sm">One!</span></p>
+                <div class="mt-8 flex items-center justify-center gap-2 text-primary opacity-80">
+                    <span class="material-symbols-outlined">expand_more</span>
+                    <span class="text-sm italic">Scroll untuk detail</span>
+                    <span class="material-symbols-outlined">expand_more</span>
+                </div>
+            </div>
+        </section>
+        <!-- SECTION 2: The Celebration -->
+        <section class="px-margin-page py-stack-lg relative" id="event">
+            <div class="text-center mb-stack-md">
+                <span class="material-symbols-outlined text-secondary text-3xl mb-2">favorite</span>
+                <h2 class="font-headline-lg-mobile text-headline-lg-mobile text-primary">The Celebration</h2>
+            </div>
+            <div class="glass-card rounded-3xl overflow-hidden shadow-lg ambient-shadow">
+                <div class="h-64 w-full bg-surface-variant">
+                    <img alt="Nayyara in pink dress" class="w-full h-full object-cover"
+                        data-alt="A full-body shot of a sweet 1-year-old baby girl sitting on a soft, fluffy white rug. She is wearing an elegant, detailed dusty pink lace dress with small ruffles. The background is a soft, warm beige and pink setup with subtle floral arrangements out of focus. The lighting is soft and professional, creating a warm, inviting, and precious mood, consistent with a high-end baby photography session."
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwlh-9pARktztrIxpZSlrMs2USBZHvZ874XEvcFfQ4YjSomhwktq64bgC6d-0n7VI87ZNNZP8qMUZ26HC2g7gqzNDFEyMqaisK8t9NylqYdStQ-zcQtoTO_xgUJccVKwp9o8EUXFZQRCSSGkslq-LjdIptDLB2LAr4rn2QYmz3UEO2I86Ht6ip-bcolqHfBN0K6t7qLHsJL13nT1pNPSYTDmtfblxDPnbGOky0jeOLNIPcP2enIjgHEmZ2DlOTalCv">
+                </div>
+                <div class="p-6 text-center">
+                    <p class="font-body-md text-on-surface-variant mb-4">
+                        Dengan penuh sukacita, kami mengundang Bapak/Ibu beserta putra-putri tercinta untuk hadir dan
+                        ikut merayakan ulang tahun pertama putri kecil kami yang tersayang.<br> <br> Mari bersama-sama
+                        menikmati
+                        hari yang penuh keceriaan, kebahagiaan, dan momen indah bersama.
+                    </p>
+                    <div class="flex justify-center items-center gap-2 text-secondary-fixed-dim">
+                        <span class="material-symbols-outlined text-sm">stars</span>
+                        <span class="material-symbols-outlined text-sm">stars</span>
+                        <span class="material-symbols-outlined text-sm">stars</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- SECTION 3: Event Details -->
+        <section class="px-margin-page py-stack-lg">
+            <div class="glass-card rounded-3xl p-6 relative">
+                <!-- Cute Accent -->
+                <div
+                    class="absolute -top-6 left-1/2 -translate-x-1/2 w-12 h-12 bg-primary-container rounded-full flex items-center justify-center border-4 border-surface shadow-sm">
+                    <span class="material-symbols-outlined text-primary text-xl"
+                        style="font-variation-settings: 'FILL' 1;">cake</span>
+                </div>
+                <h3 class="font-headline-lg-mobile text-headline-lg-mobile text-center text-primary mt-6 mb-8">Save the
+                    Date</h3>
+                <div class="flex flex-col gap-6">
+                    <!-- Date -->
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 rounded-full bg-tertiary-fixed flex items-center justify-center shrink-0">
+                            <span class="material-symbols-outlined text-tertiary text-2xl">calendar_month</span>
+                        </div>
+                        <div>
+                            <p
+                                class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider mb-1">
+                                Hari &amp; Tanggal</p>
+                            <p class="font-headline-lg-mobile text-[22px] text-primary">Kamis, 24 Sept 2026</p>
+                        </div>
+                    </div>
+                    <!-- Time -->
+                    <div class="flex items-start gap-4">
+                        <div
+                            class="w-12 h-12 rounded-full bg-secondary-container/30 flex items-center justify-center shrink-0">
+                            <span class="material-symbols-outlined text-secondary text-2xl">schedule</span>
+                        </div>
+                        <div>
+                            <p
+                                class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider mb-1">
+                                Waktu</p>
+                            <p class="font-headline-lg-mobile text-[22px] text-primary">11.00 WITA - Selesai</p>
+                        </div>
+                    </div>
+                    <!-- Location -->
+                    <div class="flex items-start gap-4">
+                        <div
+                            class="w-12 h-12 rounded-full bg-error-container/30 flex items-center justify-center shrink-0">
+                            <span class="material-symbols-outlined text-on-error-container text-2xl">home_pin</span>
+                        </div>
+                        <div>
+                            <p
+                                class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider mb-1">
+                                Tempat</p>
+                            <p class="font-headline-lg-mobile text-[22px] text-primary">Rumahku</p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-8 pt-6 border-t border-dashed border-outline-variant text-center">
+                    <p class="font-body-md text-primary font-medium italic">"Di tunggu kehadirannya teman-teman!"</p>
+                </div>
+            </div>
+        </section>
+        <!-- SECTION 4: Photo Gallery -->
+        <section class="px-margin-page py-stack-lg" id="gallery">
+            <div class="text-center mb-stack-md">
+                <span class="material-symbols-outlined text-secondary text-3xl mb-2">photo_library</span>
+                <h2 class="font-headline-lg-mobile text-headline-lg-mobile text-primary">Galeri Foto Nayyara</h2>
+            </div>
+            <!-- Bento Grid Layout for Photos -->
+            <div class="grid grid-cols-2 gap-3">
+                <div class="col-span-2 rounded-2xl overflow-hidden glass-card h-48 ambient-shadow">
+                    <img alt="Gallery 1" class="w-full h-full object-cover object-top"
+                        data-alt="A candid, joyful close-up portrait of baby Nayyara laughing playfully. She is wearing a soft, pastel-colored outfit. The lighting is natural and bright, creating a happy, endearing mood. The background is slightly blurred, focusing entirely on her expressive face and sparkling eyes. The aesthetic is clean, light-mode, and precious."
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDjESOLc2Xq2NQ07Vx8xm1by3Db0cYRQjfzGAmrH12n5FlQgeVXsHsD_POdZsMESOeYlrIozio_kXvCLEowtMLJ7om4VcZ7GazCL9gX7RnPFLVFa_UnkbAu6bVaem0pLVUH3QZiH22I8Kl_OpTQjJz1ZVcilOXKzeS2Enl59nQ90P-kj1W3pI3rymSiv--VeS59BTrGpKBiTKeSTkA_jSxZJYEABkTrxqSorSBj48EuP2qei1-XYV529Bc5Y5DggZF7">
+                </div>
+                <div class="rounded-2xl overflow-hidden glass-card h-40">
+                    <img alt="Gallery 2" class="w-full h-full object-cover"
+                        data-alt="Baby Nayyara sitting in a vintage-style high chair, holding a small wooden toy. She is wearing a delicate floral dress. The setting features soft pink and cream tones with subtle decorative bunting in the background. The mood is charming and nostalgic, with soft, diffused lighting that enhances the sweet, celebratory atmosphere."
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuD7lQhEtRGXvHEy-GG4XxOgkmVrdRkytaHEV7HVdKZdrvf3kFRZL-INs6eVLyBez6qtTWdZnIR9pm0uo_QOWshr8gDjLwRaGg-0ZfpaS-iMDbm84tHlQHyUflRrGpOvM323fqSBMhH-li3mD_UvaDjWutp1ioSZrifmxEiog4d1WbaWv71elw70ZLpMW1xg5RIfUSF4QeqOfILrf3TeWPmAmle-BtNWVvghFukrTtVS8asjFNkwKrfU95AWAQyjbH76">
+                </div>
+                <div class="rounded-2xl overflow-hidden glass-card h-40">
+                    <img alt="Gallery 3" class="w-full h-full object-cover"
+                        data-alt="A lovely portrait of baby Nayyara wearing a tiny, elegant headband with a subtle bow. She is looking directly at the camera with a calm, sweet expression. The background is a soft, textured pink backdrop with a hint of shimmering gold dust floating lightly. The overall style is highly polished, elegant, and fitting for a premium digital invitation gallery."
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDIfqud_lNIgcz_GF_FBgIfpfMzz8lOYjc1mwO7ywOhfOYIPnGnuj8JD0noJSBgxetIzchXwi0FJ_lNUwawU0Oq72xytENQxhOUAtgvytc9zay0KLD_hMoLsu8LM-lGgQIld4gurH-2ZPY9LFhxRu3FycjUkCJhY4oZRJdaHAsil7ZXYTjqp2h4wbHe102uY5gP4m6y68UTUIJDwrSIbLpippf8tWs1OQVrixnU2MW-uE6sbiN3cknBy5PkJUdWpcny">
+                </div>
+                <div class="col-span-2 rounded-2xl overflow-hidden glass-card h-48 ambient-shadow">
+                    <img alt="Gallery 4" class="w-full h-full object-cover"
+                        data-alt="A lively photo of baby Nayyara crawling towards the camera on a fluffy pink blanket, surrounded by soft, plush toys and a few scattered delicate pink rose petals. Her expression is one of pure joy and discovery. The lighting is bright and warm, emphasizing the soft textures and the playful, heartwarming essence of her first year."
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAXnRWHOvyoZg3Q01bSJkvClxm3aL3aUG23QxWcNGiEvc-4P9RulyGKfVbwa4kVdweZDv6-t9es64_tGdqJB2p08cs2UiObYUnon_lYu-WqDSfpw1WkByHeKykgISPLpatBtrmNWWltfSauG4fLeg1eM1NhJDWgf-h0V9FJJ-1UAhpK9rj0G-m-WYOrfw_1jqpLodDneMGT9l98gnk1ohdD7axcNga-E5Z1brnwnAVSBnshXDzD5hZv_SJnTKpY8ckI">
+                </div>
+            </div>
+        </section>
+        <!-- Footer -->
+        <footer
+            class="w-full py-stack-lg bg-surface-container-low dark:bg-surface-dim border-t border-dashed border-secondary-fixed flex flex-col items-center gap-4 text-center px-margin-page">
+            <p class="font-display-royal text-primary text-xl">With Love, Nayyara Elleanora Kameloan</p>
+            <div class="flex gap-4">
+                <a class="font-body-md text-body-md text-on-tertiary-fixed-variant hover:text-primary transition-colors opacity-90"
+                    href="#home">Back to Top</a>
+            </div>
+        </footer>
+    </main>
+    <script>
+        // Simple ambient sparkle effect
+        document.addEventListener('DOMContentLoaded', () => {
+            const container = document.getElementById('sparkle-container');
+            const icons = ['auto_awesome', 'flare'];
+
+            for (let i = 0; i < 15; i++) {
+                const sparkle = document.createElement('span');
+                sparkle.className = 'material-symbols-outlined sparkle';
+                sparkle.textContent = icons[Math.floor(Math.random() * icons.length)];
+
+                // Random positioning
+                sparkle.style.left = `${Math.random() * 100}vw`;
+                sparkle.style.top = `${Math.random() * 100}vh`;
+
+                // Random sizing
+                const size = 10 + Math.random() * 14;
+                sparkle.style.fontSize = `${size}px`;
+
+                // Random animation delay & duration
+                sparkle.style.animationDelay = `${Math.random() * 5}s`;
+                sparkle.style.animationDuration = `${3 + Math.random() * 4}s`;
+
+                container.appendChild(sparkle);
+            }
+        });
+    </script>
+
+
+</body>
+
+</html>
